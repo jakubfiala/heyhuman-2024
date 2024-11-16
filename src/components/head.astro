@@ -3,22 +3,40 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/heyhuman-2024/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HeyHuman 2024 residency</title>
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="icon" type="image/png" href="/heyhuman-2024/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/heyhuman-2024/favicon.svg" />
+  <link rel="shortcut icon" href="/heyhuman-2024/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/heyhuman-2024/apple-touch-icon.png" />
+  <link rel="manifest" href="/heyhuman-2024/site.webmanifest" />
 </head>
 
 <style is:global>
+  @font-face {
+    font-family: SuisseIntl;
+    src: url('/heyhuman-2024/font.woff2') format('woff2');
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
   html {
-    background: #ededed;
+    --green: #00B370;
+    --light-green: #00b37147;
+    --dark-green: #026c45;
+
+    background: #ddd;
     color: #030303;
     font-size: 16px;
-    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+    font-family: SuisseIntl, Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+  }
+
+  ::selection {
+    color: black;
+    background: var(--light-green);
   }
 
   html, body {
@@ -27,19 +45,47 @@
   }
 
   body {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1rem;
+    margin: 0;
     position: relative;
   }
 
+  @media screen and (min-width: 1024px) {
+    body {
+      grid-template-columns: 1fr 1fr;
+      display: grid;
+      overflow: hidden;
+      height: 100vh;
+    }
+  }
+
+  main, aside {
+    padding: 1rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    main, aside {
+      padding: 1rem 3rem;
+    }
+  }
+
   main {
-    margin: 2rem 0;
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  aside {
+    overflow-y: scroll;
   }
 
   h1, h2 {
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 0.025em;
+  }
+
+  a, a:visited {
+    color: var(--green);
   }
 </style>
