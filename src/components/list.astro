@@ -112,7 +112,7 @@
   }
 
   details summary::-webkit-details-marker {
-    display:none;
+    display: none;
   }
 
   @keyframes roll-out {
@@ -127,15 +127,17 @@
     }
   }
 
-  details[open] .expanded {
-    animation: roll-out 1s both;
-  }
-
   .expanded {
+    animation: none;
     clear: both;
     margin-top: 4rem;
     overflow: hidden;
     will-change: max-height;
+    max-height: 0;
+  }
+
+  details[open] .expanded {
+    animation: roll-out 1s forwards;
   }
 
   h3 {

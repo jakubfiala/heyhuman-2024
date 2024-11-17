@@ -66,13 +66,20 @@
     main, aside {
       padding: 1rem 3rem;
     }
+
+    main > * {
+      width: 100%;
+      max-width: 600px;
+    }
   }
 
   main {
+    color: white;
     background: var(--green);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
   aside {
