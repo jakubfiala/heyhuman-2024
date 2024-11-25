@@ -3,10 +3,12 @@ import PasoSuperior from '../assets/img/paso-superior.jpg';
 ---
 
 <section class="list">
-  <p class="statement">
-    Nisi et eu minim exercitation et elit nisi ut anim. Veniam ad incididunt occaecat labore amet fugiat Lorem. Non reprehenderit nostrud labore cillum veniam non nisi id aute.
-    Commodo labore incididunt dolore in aute do magna id nisi cupidatat cupidatat. Magna do ex amet ullamco id sit consectetur reprehenderit. Nostrud amet commodo non id nisi anim id. Nulla ad deserunt reprehenderit qui in cupidatat do. Aliqua laboris ad id et sunt labore ullamco labore amet officia aute ipsum quis eiusmod.
-  </p>
+  <blockquote class="statement">
+    <p>At the heart of any meaningful conversation lies the idea of exchange—a fluid, evolving dialogue that shapes and reshapes understanding. Over the past two months, this dialogue has unfolded with four artists, navigating the intricate layers of sharing spaces within a shared space. The digital realm, inherently collective, became both canvas and context—a terrain where ideas, gestures, and languages converged.</p>
+    <p>This collaboration embraced new data languages as a framework for interaction—not as rigid tools, but as an excuse to deepen relationality. The conversation tangled data with landscapes, crafts, gestural nuances, and intimate interactions. What emerged was a medley of diverse projects unified by a shared desire to humanize the digital medium. Together, these efforts translated its cold abstractions into myths, manifestos, guided meditations, and even love letters, each brimming with the warmth of embodied presence.</p>
+    <p>This experiment, however, was never solely about the digital. It challenged us to think beyond, to cultivate bodily awareness within a shared virtual space. If it needed a new name, "Sediments" feels apt—a metaphor for the layers of meaning that accumulate in the riverbed of collective effort. These sediments transform the physical and conceptual space, enriching it with new information and possibilities.</p>
+    <cite>Marta Handenawer, Domestic Data Streamers</cite>
+  </blockquote>
   <ul>
     <li>
       <div class="number"></div>
@@ -178,10 +180,11 @@ window.addEventListener('hashchange', openDetailsByHash);
   section {
     margin: 1rem 0 4rem;
     line-height: 1.4;
+    hyphens: auto;
   }
 
   .statement {
-    margin-bottom: 2rem;
+    margin: 0 0 2rem;
   }
 
   ul {
@@ -206,6 +209,7 @@ window.addEventListener('hashchange', openDetailsByHash);
 
   .number {
     margin-right: 2rem;
+    line-height: 1;
   }
 
   .number::before {
@@ -282,14 +286,11 @@ window.addEventListener('hashchange', openDetailsByHash);
   }
 
   h3 {
+    font-size: inherit;
     font-weight: normal;
     text-transform: uppercase;
     margin: 0 0 0.25rem;
     line-height: 1;
-  }
-
-  details p {
-    hyphens: auto;
   }
 
   p {
@@ -331,5 +332,10 @@ window.addEventListener('hashchange', openDetailsByHash);
 
   .links li:first-of-type a:after {
     content: '  ↗';
+  }
+
+  cite::before {
+    content: ' — ';
+    margin: 0 1ch;
   }
 </style>
