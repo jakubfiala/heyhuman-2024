@@ -12,19 +12,35 @@
     </style>
     <path d="M 0,40 L 0,0 L 200,0 L 200,100 L 0,100 L 0,60" fill="none" stroke="currentColor"></path>
     <a href="#1">
+      <rect x="47.75" y="4" width="7" height="7" fill="transparent"></rect>
       <text x="50" y="10" class="work">1</text>
     </a>
     <a href="#2">
+      <rect x="190.5" y="54.5" width="7" height="7" fill="transparent"></rect>
       <text x="192" y="60" class="work">2</text>
     </a>
     <a href="#3">
+      <rect x="148.5" y="89.5" width="7" height="7" fill="transparent"></rect>
       <text x="150" y="95" class="work">3</text>
     </a>
     <a href="#4">
+      <rect x="88.5" y="89.5" width="7" height="7" fill="transparent"></rect>
       <text x="90" y="95" class="work">4</text>
     </a>
   </svg>
 </figure>
+
+<script>
+  const numbers = document.querySelectorAll('.floorplan a');
+
+  numbers.forEach((n: HTMLAnchorElement) => {
+    const target = document.getElementById(n.getAttribute('href').slice(1));
+    if (!target) return;
+
+    n.addEventListener('pointerenter', () => target.classList.add('highlighted'));
+    n.addEventListener('pointerleave', () => target.classList.remove('highlighted'));
+  });
+</script>
 
 <style>
   .floorplan {
@@ -34,5 +50,13 @@
 
   .room-shape {
     width: 100%;
+  }
+
+  .floorplan a:hover text {
+    fill: var(--green);
+  }
+
+  .floorplan a:hover rect {
+    fill: white;
   }
 </style>

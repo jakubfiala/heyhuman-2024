@@ -2,6 +2,10 @@
 ---
 
 <section class="list">
+  <p class="statement">
+    Nisi et eu minim exercitation et elit nisi ut anim. Veniam ad incididunt occaecat labore amet fugiat Lorem. Non reprehenderit nostrud labore cillum veniam non nisi id aute.
+    Commodo labore incididunt dolore in aute do magna id nisi cupidatat cupidatat. Magna do ex amet ullamco id sit consectetur reprehenderit. Nostrud amet commodo non id nisi anim id. Nulla ad deserunt reprehenderit qui in cupidatat do. Aliqua laboris ad id et sunt labore ullamco labore amet officia aute ipsum quis eiusmod.
+  </p>
   <ul>
     <li>
       <div class="number"></div>
@@ -122,6 +126,10 @@ window.addEventListener('hashchange', openDetailsByHash);
     line-height: 1.4;
   }
 
+  .statement {
+    margin-bottom: 2rem;
+  }
+
   ul {
     counter-reset: index;
     margin: 0;
@@ -131,7 +139,7 @@ window.addEventListener('hashchange', openDetailsByHash);
 
   @media screen and (min-width: 1024px) {
     ul {
-      padding: 1rem;
+      padding: 1rem 0;
     }
   }
 
@@ -149,6 +157,12 @@ window.addEventListener('hashchange', openDetailsByHash);
   .number::before {
     counter-increment: index;
     content: counters(index, '.', decimal);
+  }
+
+  @media screen and (min-width: 1024px) {
+    .number {
+      margin-right: 4rem;
+    }
   }
 
   summary {
@@ -181,6 +195,11 @@ window.addEventListener('hashchange', openDetailsByHash);
     display: none;
   }
 
+  li:has(details.highlighted) .number,
+  li:has(details.highlighted) h3 {
+    color: var(--green);
+  }
+
   @keyframes roll-out {
     from {
       max-height: 0;
@@ -209,7 +228,8 @@ window.addEventListener('hashchange', openDetailsByHash);
   h3 {
     font-weight: normal;
     text-transform: uppercase;
-    margin: 0;
+    margin: 0 0 0.25rem;
+    line-height: 1;
   }
 
   p {
