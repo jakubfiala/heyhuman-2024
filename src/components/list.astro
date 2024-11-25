@@ -1,4 +1,5 @@
 ---
+import PasoSuperior from '../assets/img/paso-superior.jpg';
 ---
 
 <section class="list">
@@ -122,9 +123,10 @@
         </summary>
         <div class="expanded">
           <div class="text">
-            <p class="description">
-              <em>Finding Gustavo</em> is a web-based quest taking place in Google Street View. Somewhere in the still, psychedelic desert of northern Chile, the player sets off on a search for the unseen narrator's missing friend, discovering local sites of folk spirituality, the region's connections to space exploration and the effects of its destructive mining industry. With hand-crafted soundscapes, an original sound-track and an interactive world, the game turns Street View into an immersive storytelling engine.
-            </p>
+            <div class="description">
+              <p><em>Finding Gustavo</em> is a web-based quest taking place in Google Street View. Somewhere in the still, psychedelic desert of northern Chile, the player sets off on a search for the unseen narrator's missing friend, discovering local sites of folk spirituality, the region's connections to space exploration and the effects of its destructive mining industry. With hand-crafted soundscapes, an original sound-track and an interactive world, the game turns Street View into an immersive storytelling engine.</p>
+              <img src={PasoSuperior.src} alt="a satellite image of an overpass with geoglyphs within the slip lane circles">
+            </div>
             <ul class="links">
               <li>
                 <a href="https://finding-gustavo.quest">Project</a>
@@ -286,6 +288,10 @@ window.addEventListener('hashchange', openDetailsByHash);
     line-height: 1;
   }
 
+  details p {
+    hyphens: auto;
+  }
+
   p {
     margin-top: 0.5em;
   }
@@ -296,6 +302,14 @@ window.addEventListener('hashchange', openDetailsByHash);
       grid-template-columns: 5fr 1fr;
       gap: 3rem;
     }
+  }
+
+  .description {
+    position: relative;
+  }
+
+  img {
+    max-width: 100%;
   }
 
   .links {
