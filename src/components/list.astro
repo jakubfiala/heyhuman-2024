@@ -7,7 +7,7 @@ import PasoSuperior from '../assets/img/paso-superior.jpg';
     <p>At the heart of any meaningful conversation lies the idea of exchange—a fluid, evolving dialogue that shapes and reshapes understanding. Over the past two months, this dialogue has unfolded with four artists, navigating the intricate layers of sharing spaces within a shared space. The digital realm, inherently collective, became both canvas and context—a terrain where ideas, gestures, and languages converged.</p>
     <p>This collaboration embraced new data languages as a framework for interaction—not as rigid tools, but as an excuse to deepen relationality. The conversation tangled data with landscapes, crafts, gestural nuances, and intimate interactions. What emerged was a medley of diverse projects unified by a shared desire to humanize the digital medium. Together, these efforts translated its cold abstractions into myths, manifestos, guided meditations, and even love letters, each brimming with the warmth of embodied presence.</p>
     <p>This experiment, however, was never solely about the digital. It challenged us to think beyond, to cultivate bodily awareness within a shared virtual space. If it needed a new name, "Sediments" feels apt—a metaphor for the layers of meaning that accumulate in the riverbed of collective effort. These sediments transform the physical and conceptual space, enriching it with new information and possibilities.</p>
-    <cite>Marta Handenawer, Domestic Data Streamers</cite>
+    <cite>Marta Handenawer, Curator of the <a href="https://heyhuman.art">Hey Human residency</a></cite>
   </blockquote>
   <ul>
     <li>
@@ -153,11 +153,32 @@ import PasoSuperior from '../assets/img/paso-superior.jpg';
           Bérénice Gaça Courtin
         </summary>
         <div class="expanded">
-          Laboris anim adipisicing ad Lorem laborum do nisi aute deserunt elit dolore aute aute. Aute magna laborum in duis enim in velit Lorem voluptate tempor mollit ullamco. Occaecat amet consectetur minim quis non excepteur nostrud incididunt est sit proident cillum velit. Consectetur irure excepteur cillum minim nostrud anim. Irure labore velit elit sit in qui. Est consectetur culpa magna exercitation voluptate. Nulla excepteur qui occaecat laboris ullamco ipsum voluptate duis occaecat pariatur ad exercitation culpa.
+          <div class="text">
+            <div class="description">
+              <p>
+                Bérénice is creating a new dreamland, about Textile hackers, with a chapter based in Barcelona.
+              </p>
+              <p>
+                She continues the alphabet of places of Resistance made from personal archives into pictograms to generate one, which would represent different places in Barcelona.
+              </p>
+            </div>
+            <ul class="links">
+              <li>
+                <a href="https://www.instagram.com/berenice_gaca_courtin/">Instagram</a>
+              </li>
+              <li>
+                <a href="https://www.berenicecourtin.com/">Website</a>
+              </li>
+              <li>
+                <a href="mailto:berenice.courtin@gmail.com">E-mail</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </details>
     </li>
   </ul>
+  <p class="thanks">Thank you to Marta, Self, Marta and the whole DDS crew for their support during the residency &lt;3</p>
 </section>
 
 <script>
@@ -330,12 +351,30 @@ window.addEventListener('hashchange', openDetailsByHash);
     text-decoration: underline;
   }
 
-  .links li:first-of-type a:after {
+  .statement a {
+    text-decoration: none;
+  }
+
+  .statement a:hover {
+    text-decoration: underline;
+  }
+
+  .links li:first-of-type a::after,
+  .statement a::after {
     content: '  ↗';
+  }
+
+  cite {
+    font-style: normal;
   }
 
   cite::before {
     content: ' — ';
     margin: 0 1ch;
+  }
+
+  .thanks {
+    text-align: center;
+    margin-top: 3rem;
   }
 </style>
